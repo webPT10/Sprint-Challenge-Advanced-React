@@ -29,9 +29,9 @@ class PlayerCard extends Component {
                     return(
                         <div className='card-container'>
                             <div className='player-card'>
-                                <p>Name: {playing.name}</p>
-                                <p>Country: {playing.country} </p>
-                                <p>Searches: {playing.searches} </p>
+                                <p className='name'>Name: {playing.name}</p>
+                                <p className='country'>Country: {playing.country} </p>
+                                <p className='searches'>Searches: {playing.searches} </p>
                             </div>
                         </div>
                     )
