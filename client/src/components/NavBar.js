@@ -9,14 +9,16 @@ const NavBar = () => {
     }
 
     return (
+        <div>
         <div className='navbar'>
             <div className='toggle_dark-mode'>
                 <button 
                     className={darkMode ? 'toggle toggled' : 'toggle'}
                     onClick={toggleMode}
-                >Button</button>
+                >Dark</button>
             </div>
-            <div>
+        </div>
+            <div className='header'>
                 <h4>2019 Women's World Cup</h4>
                 <p>Players ranked by search interest from Google Trends</p>
                 <h5>June-July 2019, worldwide</h5>
