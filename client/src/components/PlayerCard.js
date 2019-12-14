@@ -23,16 +23,16 @@ class PlayerCard extends Component {
         console.log(this.state)
         return (
             <>
-                <h4>2019 Women's World Cup</h4>
-                <p>Players ranked by search interest from Google Trends</p>
-                <h5>June-July 2019, worldwide</h5>
+                <h5>Players:</h5>
                 {players.map(playing => {
                     {console.log(playing)}
                     return(
-                        <div className='player-card'>
-                            <p>Name: {playing.name}</p>
-                            <p>Country: {playing.country} </p>
-                            <p>Searches: {playing.searches} </p>
+                        <div className='card-container'>
+                            <div className='player-card'>
+                                <p>Name: {playing.name}</p>
+                                <p>Country: {playing.country} </p>
+                                <p>Searches: {playing.searches} </p>
+                            </div>
                         </div>
                     )
                 })}
