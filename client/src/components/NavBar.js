@@ -9,7 +9,7 @@ const NavBar = () => {
     }
 
     return (
-        <div>
+        <div className='navbar'>
             <div className='toggle_dark-mode'>
                 <button 
                     className={darkMode ? 'toggle toggled' : 'toggle'}
