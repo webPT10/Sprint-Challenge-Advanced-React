@@ -10,9 +10,29 @@ test('renders without crashing!', () => {
     const simulatedDOM = rtl.render(<PlayerCard />)
 })
 
-test('Player content displayed', () => {
-    const simulatedDOM = rtl.render(<PlayerCard />)
-
-    const playerName = document.querySelector('div.card-container div.player-card p.name');
-    expect(playerName).toBeInTheDocument();
+test('Name renders', () => {
+    const wrapper = rtl.render(
+       <div className='name'>Name:</div> 
+    )
+    const element = wrapper.queryByText(/name/i);
+    expect(element).toBeInTheDocument();
+    expect(element).toBeVisible()
 })
+
+test('Country renders', () => {
+    const wrapper = rtl.render (
+        <div className='country'>Country:</div>
+    )
+    const element = wrapper.queryByText(/country/i);
+    expect(element).toBeVisible()
+})
+
+test('Search exists', () => {
+    const wrapper = rtl.render(
+        <div className='searches'>Searches: </div>
+    );
+    const element = wrapper.queryByText(/searches/i);
+    expect(element).toBeTruthy()
+    
+})
+
